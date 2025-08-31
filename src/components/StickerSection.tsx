@@ -1,15 +1,7 @@
 
-export const StickerSection = () => {
-  // Placeholder stickers - will be replaced with actual Telegram stickers
-  const stickers = [
-    { emoji: "🥷", caption: "The Master - Silent and deadly" },
-    { emoji: "⚔️", caption: "Twin Blades - Swift strikes" },
-    { emoji: "🌪️", caption: "Whirlwind - Speed incarnate" },
-    { emoji: "💨", caption: "Vanish - Here one moment, gone the next" },
-    { emoji: "🔥", caption: "Fire Strike - Burning passion" },
-    { emoji: "⭐", caption: "Shuriken Master - Precision perfected" },
-  ];
+import { stickerData } from "@/data/stickers";
 
+export const StickerSection = () => {
   return (
     <section className="py-20 px-4" id="stickers">
       <div className="container mx-auto">
@@ -32,9 +24,9 @@ export const StickerSection = () => {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {stickers.map((sticker, index) => (
+          {stickerData.map((sticker) => (
             <div 
-              key={index} 
+              key={sticker.id} 
               className="sticker-hover bg-gradient-to-br from-dojo-steel to-dojo-shadow p-6 rounded-2xl border border-katana-blue/20 text-center cursor-pointer"
             >
               <div className="text-6xl mb-4">{sticker.emoji}</div>

@@ -8,15 +8,8 @@ export const TickerBar = () => {
         <span className="text-ninja-text">$SHINOBI</span>
         <span className="text-dojo-void">•</span>
         <span className="text-ninja-text">Live on TON</span>
-        <a 
-          href="#" 
-          className="flex items-center gap-1 text-ninja-text hover:text-katana-cyan transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>DexScreener</span>
-          <ExternalLink size={14} />
-        </a>
+        <span className="text-dojo-void">•</span>
+        <span className="text-ninja-text">DexScreener: Coming at 25k MC</span>
       </div>
     </div>
   );

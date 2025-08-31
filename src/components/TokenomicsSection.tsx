@@ -17,7 +17,7 @@ export const TokenomicsSection = () => {
               </div>
               <div>
                 <h3 className="font-orbitron font-bold text-xl text-glow-blue mb-1">💠 Supply</h3>
-                <p className="text-mist-text font-rajdhani">[Insert total supply]</p>
+                <p className="text-mist-text font-rajdhani">1,000,000 $SHINOBI</p>
               </div>
             </div>
             

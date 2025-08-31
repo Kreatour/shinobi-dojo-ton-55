@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Swords } from "lucide-react";
+import { Swords, MessageCircle, Twitter, BarChart3, ShoppingCart } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -42,9 +42,27 @@ export const HeroSection = () => {
           <span className="text-glow-purple">Ninja forever.</span>
         </div>
         
-        <Button className="btn-dojo text-xl px-12 py-6 font-orbitron font-bold">
-          Join the Dojo
-        </Button>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <Button className="btn-dojo text-xl px-12 py-6 font-orbitron font-bold flex items-center gap-3">
+            <ShoppingCart className="w-6 h-6" />
+            Buy $SHINOBI
+          </Button>
+          <Button className="btn-crimson text-xl px-12 py-6 font-orbitron font-bold">
+            Join the Dojo
+          </Button>
+        </div>
+        
+        <div className="flex items-center justify-center gap-6">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
+            <MessageCircle className="w-8 h-8" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
+            <Twitter className="w-8 h-8" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
+            <BarChart3 className="w-8 h-8" />
+          </a>
+        </div>
       </div>
     </section>
   );

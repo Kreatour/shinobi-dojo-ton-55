@@ -33,7 +33,7 @@ export const CommunitySection = () => {
             <a href="#" target="_blank" rel="noopener noreferrer" className="block">
               <Button className="btn-shadow w-full h-20 text-lg flex items-center justify-center gap-3">
                 <BarChart3 className="w-6 h-6" />
-                DexScreener
+                DexScreener (25k MC)
               </Button>
             </a>
           </div>
