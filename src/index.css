@@ -1,96 +1,52 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Ninja Dojo Design System */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Ninja Dojo Color Palette */
+    --dojo-void: 0 0% 8%;
+    --dojo-shadow: 240 10% 12%;
+    --dojo-steel: 220 8% 18%;
+    --dojo-mist: 220 15% 25%;
+    
+    --katana-blue: 200 100% 50%;
+    --katana-cyan: 180 100% 65%;
+    --blood-red: 0 85% 55%;
+    --crimson-glow: 350 90% 60%;
+    --royal-purple: 270 75% 60%;
+    --mystic-violet: 285 85% 70%;
+    
+    --ninja-text: 0 0% 95%;
+    --mist-text: 220 20% 75%;
+    --shadow-text: 220 15% 60%;
+    
+    /* Shadows & Glows */
+    --katana-glow: 0 0 20px hsl(200 100% 50% / 0.5);
+    --crimson-glow-shadow: 0 0 20px hsl(0 85% 55% / 0.4);
+    --purple-glow-shadow: 0 0 20px hsl(270 75% 60% / 0.3);
+    
+    /* Base Design Tokens */
+    --background: var(--dojo-void);
+    --foreground: var(--ninja-text);
+    --card: var(--dojo-shadow);
+    --card-foreground: var(--ninja-text);
+    --primary: var(--katana-blue);
+    --primary-foreground: var(--dojo-void);
+    --secondary: var(--royal-purple);
+    --secondary-foreground: var(--ninja-text);
+    --accent: var(--blood-red);
+    --accent-foreground: var(--ninja-text);
+    --muted: var(--dojo-steel);
+    --muted-foreground: var(--mist-text);
+    --border: var(--dojo-steel);
+    --input: var(--dojo-shadow);
+    --ring: var(--katana-blue);
+    --radius: 0.75rem;
   }
 }
 
@@ -98,8 +54,85 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-rajdhani;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(270 75% 60% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(200 100% 50% / 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsl(0 85% 55% / 0.05) 0%, transparent 50%);
+  }
+  
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+  
+  .font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+  }
+}
+
+@layer components {
+  /* Ninja Button Variants */
+  .btn-dojo {
+    @apply bg-gradient-to-r from-katana-blue to-katana-cyan text-dojo-void font-bold px-8 py-4 rounded-xl;
+    @apply hover:from-katana-cyan hover:to-katana-blue transform hover:scale-105 transition-all duration-300;
+    @apply shadow-[0_0_20px_hsl(200_100%_50%_/_0.4)] hover:shadow-[0_0_30px_hsl(200_100%_50%_/_0.6)];
+  }
+  
+  .btn-crimson {
+    @apply bg-gradient-to-r from-blood-red to-crimson-glow text-ninja-text font-bold px-6 py-3 rounded-lg;
+    @apply hover:from-crimson-glow hover:to-blood-red transform hover:scale-105 transition-all duration-300;
+    @apply shadow-[0_0_15px_hsl(0_85%_55%_/_0.4)] hover:shadow-[0_0_25px_hsl(0_85%_55%_/_0.6)];
+  }
+  
+  .btn-shadow {
+    @apply bg-gradient-to-r from-dojo-steel to-dojo-mist text-ninja-text font-semibold px-6 py-3 rounded-lg;
+    @apply hover:from-dojo-mist hover:to-dojo-steel border border-katana-blue/30;
+    @apply hover:border-katana-blue/60 transform hover:scale-105 transition-all duration-300;
+  }
+  
+  /* Ninja Text Effects */
+  .text-glow-blue {
+    @apply text-katana-blue;
+    text-shadow: 0 0 10px hsl(200 100% 50% / 0.8);
+  }
+  
+  .text-glow-red {
+    @apply text-blood-red;
+    text-shadow: 0 0 10px hsl(0 85% 55% / 0.8);
+  }
+  
+  .text-glow-purple {
+    @apply text-royal-purple;
+    text-shadow: 0 0 10px hsl(270 75% 60% / 0.8);
+  }
+  
+  /* Ninja Containers */
+  .dojo-card {
+    @apply bg-gradient-to-br from-dojo-shadow to-dojo-steel/80 backdrop-blur-sm;
+    @apply border border-katana-blue/20 rounded-2xl p-8;
+    @apply shadow-[0_8px_32px_hsl(0_0%_0%_/_0.4)];
+  }
+  
+  .ninja-scroll {
+    @apply bg-gradient-to-b from-dojo-steel to-dojo-shadow;
+    @apply border-2 border-katana-blue/30 rounded-3xl p-8;
+    @apply shadow-[inset_0_2px_20px_hsl(200_100%_50%_/_0.1)];
+  }
+  
+  /* Hover Effects */
+  .sticker-hover {
+    @apply transform transition-all duration-300 hover:scale-110 hover:rotate-3;
+    @apply hover:drop-shadow-[0_0_15px_hsl(200_100%_50%_/_0.6)];
+  }
+  
+  .shuriken-spin {
+    @apply animate-spin hover:animate-none cursor-pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .ninja-fade {
+    @apply animate-pulse hover:animate-none;
   }
 }
