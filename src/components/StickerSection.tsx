@@ -23,13 +23,19 @@ export const StickerSection = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {stickerData.map((sticker) => (
             <div 
               key={sticker.id} 
               className="sticker-hover bg-gradient-to-br from-dojo-steel to-dojo-shadow p-6 rounded-2xl border border-katana-blue/20 text-center cursor-pointer"
             >
-              <div className="text-6xl mb-4">{sticker.emoji}</div>
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <img 
+                  src={sticker.imageUrl} 
+                  alt={sticker.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <p className="text-sm font-rajdhani font-semibold text-mist-text">{sticker.caption}</p>
             </div>
           ))}

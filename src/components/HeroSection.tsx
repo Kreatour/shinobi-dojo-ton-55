@@ -16,10 +16,14 @@ export const HeroSection = () => {
       </div>
       
       <div className="container mx-auto text-center relative z-10">
-        {/* Ninja Silhouette Placeholder */}
+        {/* Ninja Sticker */}
         <div className="mb-8 flex justify-center">
-          <div className="w-32 h-32 bg-gradient-to-b from-katana-blue to-royal-purple rounded-full flex items-center justify-center shadow-[0_0_50px_hsl(200_100%_50%_/_0.5)]">
-            <span className="text-6xl">🥷</span>
+          <div className="w-32 h-32 rounded-full flex items-center justify-center shadow-[0_0_50px_hsl(200_100%_50%_/_0.5)]">
+            <img 
+              src="/src/data/ShinobiAssassin_10_🤫.gif" 
+              alt="Shinobi Assassin" 
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
         
