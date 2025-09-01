@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 @layer base {
+  /* ... keep existing code (root variables) the same ... */
   :root {
     /* Ninja Dojo Color Palette */
     --dojo-void: 0 0% 8%;
@@ -50,6 +52,7 @@
 }
 
 @layer base {
+  /* ... keep existing code (base styles) the same ... */
   * {
     @apply border-border;
   }
@@ -72,6 +75,7 @@
 }
 
 @layer components {
+  /* ... keep existing code (button styles) the same ... */
   /* Enhanced Ninja Button Variants */
   .btn-dojo {
     @apply bg-gradient-to-r from-katana-blue to-katana-cyan text-dojo-void font-bold px-8 py-4 rounded-xl;
@@ -114,6 +118,7 @@
     animation: ninja-pulse 2.5s ease-in-out infinite reverse;
   }
   
+  /* ... keep existing code (text effects and containers) the same ... */
   /* Ninja Text Effects */
   .text-glow-blue {
     @apply text-katana-blue;
@@ -166,47 +171,69 @@
   
   .perspective-1000 {
     perspective: 1000px;
+    perspective-origin: center top;
   }
 
-  /* Scroll Animation Keyframes */
+  /* Enhanced Scroll Animation Keyframes */
   @keyframes scroll-unroll {
     0% {
-      transform: rotateX(-90deg) translateY(-50px) scale(0.8);
+      transform: rotateX(-180deg) translateZ(-100px) scale(0.6);
       opacity: 0;
+      transform-origin: top center;
     }
-    30% {
-      transform: rotateX(-45deg) translateY(-25px) scale(0.9);
+    25% {
+      transform: rotateX(-135deg) translateZ(-60px) scale(0.7);
+      opacity: 0.3;
+    }
+    50% {
+      transform: rotateX(-90deg) translateZ(-30px) scale(0.85);
       opacity: 0.6;
     }
+    75% {
+      transform: rotateX(-45deg) translateZ(-10px) scale(0.95);
+      opacity: 0.8;
+    }
     100% {
-      transform: rotateX(0deg) translateY(0px) scale(1);
+      transform: rotateX(0deg) translateZ(0px) scale(1);
       opacity: 1;
+      transform-origin: center center;
     }
   }
   
   @keyframes scroll-roll {
     0% {
-      transform: rotateX(0deg) translateY(0px) scale(1);
+      transform: rotateX(0deg) translateZ(0px) scale(1);
       opacity: 1;
+      transform-origin: center center;
     }
-    70% {
-      transform: rotateX(-45deg) translateY(-25px) scale(0.9);
+    25% {
+      transform: rotateX(-45deg) translateZ(-10px) scale(0.95);
+      opacity: 0.8;
+    }
+    50% {
+      transform: rotateX(-90deg) translateZ(-30px) scale(0.85);
       opacity: 0.6;
     }
+    75% {
+      transform: rotateX(-135deg) translateZ(-60px) scale(0.7);
+      opacity: 0.3;
+    }
     100% {
-      transform: rotateX(-90deg) translateY(-50px) scale(0.8);
+      transform: rotateX(-180deg) translateZ(-100px) scale(0.6);
       opacity: 0;
+      transform-origin: top center;
     }
   }
   
   .animate-scroll-unroll {
-    animation: scroll-unroll 1s ease-out forwards;
+    animation: scroll-unroll 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
   }
   
   .animate-scroll-roll {
-    animation: scroll-roll 0.8s ease-in forwards;
+    animation: scroll-roll 1s cubic-bezier(0.55, 0.06, 0.68, 0.19) forwards;
   }
 
+  /* ... keep existing code (ninja keyframes) the same ... */
   /* Ninja Keyframes */
   @keyframes ninja-pulse {
     0%, 100% {
