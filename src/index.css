@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -157,6 +156,55 @@
   
   .ninja-fade {
     @apply animate-pulse hover:animate-none;
+  }
+
+  /* Ancient Scroll Styles */
+  .ninja-ancient-scroll {
+    @apply relative;
+    transform-style: preserve-3d;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  /* Scroll Animation Keyframes */
+  @keyframes scroll-unroll {
+    0% {
+      transform: rotateX(-90deg) translateY(-50px) scale(0.8);
+      opacity: 0;
+    }
+    30% {
+      transform: rotateX(-45deg) translateY(-25px) scale(0.9);
+      opacity: 0.6;
+    }
+    100% {
+      transform: rotateX(0deg) translateY(0px) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scroll-roll {
+    0% {
+      transform: rotateX(0deg) translateY(0px) scale(1);
+      opacity: 1;
+    }
+    70% {
+      transform: rotateX(-45deg) translateY(-25px) scale(0.9);
+      opacity: 0.6;
+    }
+    100% {
+      transform: rotateX(-90deg) translateY(-50px) scale(0.8);
+      opacity: 0;
+    }
+  }
+  
+  .animate-scroll-unroll {
+    animation: scroll-unroll 1s ease-out forwards;
+  }
+  
+  .animate-scroll-roll {
+    animation: scroll-roll 0.8s ease-in forwards;
   }
 
   /* Ninja Keyframes */
