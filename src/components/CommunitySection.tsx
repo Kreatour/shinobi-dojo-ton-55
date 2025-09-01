@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Twitter, BarChart3 } from "lucide-react";
+import { X, BarChart3 } from "lucide-react";
 
 export const CommunitySection = () => {
   return (
@@ -15,17 +15,10 @@ export const CommunitySection = () => {
             The ninja doesn't fight alone — the dojo is strong.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="https://t.me/shinobionton" target="_blank" rel="noopener noreferrer" className="block">
-              <Button className="btn-dojo w-full h-20 text-lg flex items-center justify-center gap-3">
-                <MessageCircle className="w-6 h-6" />
-                Telegram
-              </Button>
-            </a>
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <a href="https://x.com/shinobionton" target="_blank" rel="noopener noreferrer" className="block">
               <Button className="btn-crimson w-full h-20 text-lg flex items-center justify-center gap-3">
-                <Twitter className="w-6 h-6" />
+                <X className="w-6 h-6" />
                 X (Twitter)
               </Button>
             </a>

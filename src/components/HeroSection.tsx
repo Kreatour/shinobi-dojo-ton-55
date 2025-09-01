@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Swords, MessageCircle, Twitter, BarChart3, ShoppingCart, Copy } from "lucide-react";
+import { Swords, Twitter, BarChart3, ShoppingCart, Copy, X } from "lucide-react";
 import { useState } from "react";
 
 export const HeroSection = () => {
@@ -31,13 +32,11 @@ export const HeroSection = () => {
       <div className="container mx-auto text-center relative z-10">
         {/* Ninja Sticker - Clean, no container */}
         <div className="mb-8 flex justify-center">
-          <div className="w-32 h-32 flex items-center justify-center">
-            <img 
-              src="/src/data/ShinobiAssassin_10_🤫.gif" 
-              alt="Shinobi Assassin" 
-              className="w-full h-full object-contain filter drop-shadow-[0_0_30px_hsl(200_100%_50%_/_0.4)]"
-            />
-          </div>
+          <img 
+            src="/src/data/ShinobiAssassin_10_🤫.gif" 
+            alt="Shinobi Assassin" 
+            className="w-32 h-32 object-contain filter drop-shadow-[0_0_30px_hsl(200_100%_50%_/_0.4)] hover:drop-shadow-[0_0_50px_hsl(200_100%_50%_/_0.8)] transition-all duration-300 hover:scale-110"
+          />
         </div>
         
         <h1 className="font-orbitron text-6xl md:text-8xl font-black mb-6">
@@ -79,29 +78,35 @@ export const HeroSection = () => {
             </div>
           )}
         </div>
+
+        {/* Add Stickers Button */}
+        <div className="mb-6">
+          <a href="https://t.me/addstickers/ShinobiAssassin" target="_blank" rel="noopener noreferrer">
+            <Button className="btn-shadow text-lg px-8 py-4 font-orbitron font-bold">
+              Add Sticker Pack to Telegram
+            </Button>
+          </a>
+        </div>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a href="https://t.me/stonks_sniper_bot?start=id=chibhanzi=EQCL2JFltDVh1mU6CLc7KvzGD7DmpwHWHkok_EnqQlaycfgZ" target="_blank" rel="noopener noreferrer">
-            <Button className="btn-dojo text-xl px-12 py-6 font-orbitron font-bold flex items-center gap-3">
-              <ShoppingCart className="w-6 h-6" />
+            <Button className="ninja-buy-btn text-xl px-12 py-6 font-orbitron font-bold flex items-center gap-3 group">
+              <ShoppingCart className="w-6 h-6 group-hover:animate-bounce" />
               Buy $SHINOBI
             </Button>
           </a>
           <a href="https://t.me/shinobionton" target="_blank" rel="noopener noreferrer">
-            <Button className="btn-crimson text-xl px-12 py-6 font-orbitron font-bold">
+            <Button className="ninja-dojo-btn text-xl px-12 py-6 font-orbitron font-bold group">
               Join the Dojo
             </Button>
           </a>
         </div>
         
         <div className="flex items-center justify-center gap-6">
-          <a href="https://t.me/shinobionton" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
-            <MessageCircle className="w-8 h-8" />
+          <a href="https://x.com/shinobionton" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors hover:scale-110 transform duration-300">
+            <X className="w-8 h-8" />
           </a>
-          <a href="https://x.com/shinobionton" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
-            <Twitter className="w-8 h-8" />
-          </a>
-          <a href="https://dexscreener.com/ton/EQCsSZk2VI3oQfInyyjuvea08AFgfIcxxIShcVq1b9c5HGde" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
+          <a href="https://dexscreener.com/ton/EQCsSZk2VI3oQfInyyjuvea08AFgfIcxxIShcVq1b9c5HGde" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors hover:scale-110 transform duration-300">
             <BarChart3 className="w-8 h-8" />
           </a>
         </div>

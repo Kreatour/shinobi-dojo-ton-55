@@ -73,7 +73,7 @@
 }
 
 @layer components {
-  /* Ninja Button Variants */
+  /* Enhanced Ninja Button Variants */
   .btn-dojo {
     @apply bg-gradient-to-r from-katana-blue to-katana-cyan text-dojo-void font-bold px-8 py-4 rounded-xl;
     @apply hover:from-katana-cyan hover:to-katana-blue transform hover:scale-105 transition-all duration-300;
@@ -90,6 +90,29 @@
     @apply bg-gradient-to-r from-dojo-steel to-dojo-mist text-ninja-text font-semibold px-6 py-3 rounded-lg;
     @apply hover:from-dojo-mist hover:to-dojo-steel border border-katana-blue/30;
     @apply hover:border-katana-blue/60 transform hover:scale-105 transition-all duration-300;
+  }
+
+  /* Ninja Special Button Styles */
+  .ninja-buy-btn {
+    @apply relative bg-gradient-to-r from-katana-blue via-katana-cyan to-katana-blue text-dojo-void font-bold rounded-xl;
+    @apply before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent;
+    @apply before:translate-x-[-200%] before:rounded-xl before:transition-transform before:duration-700;
+    @apply hover:before:translate-x-[200%] transform hover:scale-105 transition-all duration-300;
+    @apply shadow-[0_0_25px_hsl(200_100%_50%_/_0.5),inset_0_1px_0_hsl(200_100%_70%_/_0.3)];
+    @apply hover:shadow-[0_0_40px_hsl(200_100%_50%_/_0.8),0_0_60px_hsl(180_100%_65%_/_0.4)];
+    background-size: 200% 100%;
+    animation: ninja-pulse 2s ease-in-out infinite;
+  }
+
+  .ninja-dojo-btn {
+    @apply relative bg-gradient-to-r from-blood-red via-crimson-glow to-blood-red text-ninja-text font-bold rounded-xl;
+    @apply before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent;
+    @apply before:translate-x-[-200%] before:rounded-xl before:transition-transform before:duration-700;
+    @apply hover:before:translate-x-[200%] transform hover:scale-105 transition-all duration-300;
+    @apply shadow-[0_0_25px_hsl(0_85%_55%_/_0.5),inset_0_1px_0_hsl(350_90%_70%_/_0.3)];
+    @apply hover:shadow-[0_0_40px_hsl(0_85%_55%_/_0.8),0_0_60px_hsl(350_90%_60%_/_0.4)];
+    background-size: 200% 100%;
+    animation: ninja-pulse 2.5s ease-in-out infinite reverse;
   }
   
   /* Ninja Text Effects */
@@ -134,5 +157,22 @@
   
   .ninja-fade {
     @apply animate-pulse hover:animate-none;
+  }
+
+  /* Ninja Keyframes */
+  @keyframes ninja-pulse {
+    0%, 100% {
+      background-position: 0% 50%;
+      box-shadow: 
+        0 0 25px hsl(var(--katana-blue) / 0.5),
+        inset 0 1px 0 hsl(var(--katana-cyan) / 0.3);
+    }
+    50% {
+      background-position: 100% 50%;
+      box-shadow: 
+        0 0 35px hsl(var(--katana-blue) / 0.7),
+        0 0 50px hsl(var(--katana-cyan) / 0.3),
+        inset 0 1px 0 hsl(var(--katana-cyan) / 0.5);
+    }
   }
 }
