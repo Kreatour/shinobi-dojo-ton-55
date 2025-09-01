@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Swords, Twitter, BarChart3, ShoppingCart, Copy, X } from "lucide-react";
 import { useState } from "react";
@@ -30,14 +29,15 @@ export const HeroSection = () => {
       </div>
       
       <div className="container mx-auto text-center relative z-10">
-        {/* Ninja Sticker - Clean, no container */}
+        {/* Ninja Sticker - Enlarged by 1.5x */}
         <div className="mb-8 flex justify-center">
           <img 
             src="/src/data/ShinobiAssassin_10_🤫.gif" 
             alt="Shinobi Assassin" 
-            className="w-32 h-32 object-contain filter drop-shadow-[0_0_30px_hsl(200_100%_50%_/_0.4)] hover:drop-shadow-[0_0_50px_hsl(200_100%_50%_/_0.8)] transition-all duration-300 hover:scale-110"
+            className="w-48 h-48 object-contain filter drop-shadow-[0_0_30px_hsl(200_100%_50%_/_0.4)] hover:drop-shadow-[0_0_50px_hsl(200_100%_50%_/_0.8)] transition-all duration-300 hover:scale-110"
           />
         </div>
+        
         
         <h1 className="font-orbitron text-6xl md:text-8xl font-black mb-6">
           <span className="text-glow-blue">The Ninja</span>

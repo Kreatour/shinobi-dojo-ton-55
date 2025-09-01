@@ -1,5 +1,6 @@
 
 import { stickerData } from "@/data/stickers";
+import { Button } from "@/components/ui/button";
 
 export const StickerSection = () => {
   // Show only first 6 stickers for a cleaner look
@@ -27,7 +28,7 @@ export const StickerSection = () => {
         </div>
         
         {/* Minimalist sticker grid - more ninja-like */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto mb-12">
           {featuredStickers.map((sticker) => (
             <div 
               key={sticker.id} 
@@ -45,6 +46,15 @@ export const StickerSection = () => {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Add Sticker Pack Button */}
+        <div className="text-center">
+          <a href="https://t.me/addstickers/ShinobiAssassin" target="_blank" rel="noopener noreferrer">
+            <Button className="btn-shadow text-lg px-8 py-4 font-orbitron font-bold">
+              Add Sticker Pack to Telegram
+            </Button>
+          </a>
         </div>
       </div>
     </section>
