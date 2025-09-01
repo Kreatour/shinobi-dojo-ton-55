@@ -32,7 +32,7 @@ export const HeroSection = () => {
         {/* Ninja Sticker - Enlarged by 1.5x */}
         <div className="mb-8 flex justify-center">
           <img 
-            src="/src/data/ShinobiAssassin_10_🤫.gif" 
+            src="/stickers/ShinobiAssassin_10_🤫.gif" 
             alt="Shinobi Assassin" 
             className="w-48 h-48 object-contain filter drop-shadow-[0_0_30px_hsl(200_100%_50%_/_0.4)] hover:drop-shadow-[0_0_50px_hsl(200_100%_50%_/_0.8)] transition-all duration-300 hover:scale-110"
           />
