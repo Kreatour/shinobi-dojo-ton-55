@@ -79,15 +79,6 @@ export const HeroSection = () => {
           )}
         </div>
 
-        {/* Add Stickers Button */}
-        <div className="mb-6">
-          <a href="https://t.me/addstickers/ShinobiAssassin" target="_blank" rel="noopener noreferrer">
-            <Button className="btn-shadow text-lg px-8 py-4 font-orbitron font-bold">
-              Add Sticker Pack to Telegram
-            </Button>
-          </a>
-        </div>
-        
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a href="https://t.me/stonks_sniper_bot?start=id=chibhanzi=EQCL2JFltDVh1mU6CLc7KvzGD7DmpwHWHkok_EnqQlaycfgZ" target="_blank" rel="noopener noreferrer">
             <Button className="ninja-buy-btn text-xl px-12 py-6 font-orbitron font-bold flex items-center gap-3 group">

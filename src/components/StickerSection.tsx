@@ -48,10 +48,10 @@ export const StickerSection = () => {
           ))}
         </div>
 
-        {/* Add Sticker Pack Button */}
-        <div className="text-center">
-          <a href="https://t.me/addstickers/ShinobiAssassin" target="_blank" rel="noopener noreferrer">
-            <Button className="btn-shadow text-lg px-8 py-4 font-orbitron font-bold">
+        {/* Add Sticker Pack Button - Mobile Responsive */}
+        <div className="flex justify-center px-4">
+          <a href="https://t.me/addstickers/ShinobiAssassin" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Button className="btn-shadow text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 font-orbitron font-bold w-full sm:w-auto">
               Add Sticker Pack to Telegram
             </Button>
           </a>
