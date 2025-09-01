@@ -19,7 +19,7 @@ export const Footer = () => {
           </div>
           
           <div className="mt-12 pt-8 border-t border-dojo-steel text-shadow-text font-rajdhani">
-            © 2024 Shinobi Token. Built by the community, for the community.
+            © 2025 Shinobi Token. Built by the community, for the community.
           </div>
         </div>
       </div>

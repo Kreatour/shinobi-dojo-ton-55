@@ -16,24 +16,24 @@ export const CommunitySection = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://t.me/shinobionton" target="_blank" rel="noopener noreferrer" className="block">
               <Button className="btn-dojo w-full h-20 text-lg flex items-center justify-center gap-3">
                 <MessageCircle className="w-6 h-6" />
                 Telegram
               </Button>
             </a>
             
-            <a href="#" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://x.com/shinobionton" target="_blank" rel="noopener noreferrer" className="block">
               <Button className="btn-crimson w-full h-20 text-lg flex items-center justify-center gap-3">
                 <Twitter className="w-6 h-6" />
                 X (Twitter)
               </Button>
             </a>
             
-            <a href="#" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://dexscreener.com/ton/EQCsSZk2VI3oQfInyyjuvea08AFgfIcxxIShcVq1b9c5HGde" target="_blank" rel="noopener noreferrer" className="block">
               <Button className="btn-shadow w-full h-20 text-lg flex items-center justify-center gap-3">
                 <BarChart3 className="w-6 h-6" />
-                DexScreener (25k MC)
+                DexScreener
               </Button>
             </a>
           </div>

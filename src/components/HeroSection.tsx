@@ -1,8 +1,21 @@
-
 import { Button } from "@/components/ui/button";
-import { Swords, MessageCircle, Twitter, BarChart3, ShoppingCart } from "lucide-react";
+import { Swords, MessageCircle, Twitter, BarChart3, ShoppingCart, Copy } from "lucide-react";
+import { useState } from "react";
 
 export const HeroSection = () => {
+  const [copied, setCopied] = useState(false);
+  const contractAddress = "EQCL2JFltDVh1mU6CLc7KvzGD7DmpwHWHkok_EnqQlaycfgZ";
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(contractAddress);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
       {/* Animated Background Elements */}
@@ -41,29 +54,54 @@ export const HeroSection = () => {
           A symbol of stealth, speed, and strength — now a memecoin powered by the people.
         </p>
         
-        <div className="text-2xl font-orbitron font-bold mb-12">
+        <div className="text-2xl font-orbitron font-bold mb-8">
           <span className="text-glow-red">🔥 Meme first.</span>{" "}
           <span className="text-glow-purple">Ninja forever.</span>
         </div>
+
+        {/* Copy CA Section */}
+        <div className="flex flex-col items-center justify-center gap-3 mb-8">
+          <div className="text-sm font-rajdhani font-semibold text-mist-text">Contract Address:</div>
+          <div className="flex items-center gap-2 bg-dojo-steel/20 border border-katana-blue/30 rounded-lg p-3">
+            <code className="font-mono text-sm text-katana-cyan break-all">
+              {contractAddress}
+            </code>
+            <Button
+              onClick={copyToClipboard}
+              className="btn-shadow h-8 w-8 p-0 flex items-center justify-center"
+            >
+              <Copy className="w-4 h-4" />
+            </Button>
+          </div>
+          {copied && (
+            <div className="text-sm text-glow-blue font-rajdhani font-semibold">
+              ✅ Copied to clipboard!
+            </div>
+          )}
+        </div>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <Button className="btn-dojo text-xl px-12 py-6 font-orbitron font-bold flex items-center gap-3">
-            <ShoppingCart className="w-6 h-6" />
-            Buy $SHINOBI
-          </Button>
-          <Button className="btn-crimson text-xl px-12 py-6 font-orbitron font-bold">
-            Join the Dojo
-          </Button>
+          <a href="https://t.me/stonks_sniper_bot?start=id=chibhanzi=EQCL2JFltDVh1mU6CLc7KvzGD7DmpwHWHkok_EnqQlaycfgZ" target="_blank" rel="noopener noreferrer">
+            <Button className="btn-dojo text-xl px-12 py-6 font-orbitron font-bold flex items-center gap-3">
+              <ShoppingCart className="w-6 h-6" />
+              Buy $SHINOBI
+            </Button>
+          </a>
+          <a href="https://t.me/shinobionton" target="_blank" rel="noopener noreferrer">
+            <Button className="btn-crimson text-xl px-12 py-6 font-orbitron font-bold">
+              Join the Dojo
+            </Button>
+          </a>
         </div>
         
         <div className="flex items-center justify-center gap-6">
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
+          <a href="https://t.me/shinobionton" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
             <MessageCircle className="w-8 h-8" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
+          <a href="https://x.com/shinobionton" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
             <Twitter className="w-8 h-8" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
+          <a href="https://dexscreener.com/ton/EQCsSZk2VI3oQfInyyjuvea08AFgfIcxxIShcVq1b9c5HGde" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors">
             <BarChart3 className="w-8 h-8" />
           </a>
         </div>
