@@ -94,7 +94,7 @@ export const HeroSection = () => {
         </div>
         
         <div className="flex items-center justify-center gap-6">
-          <a href="https://x.com/shinobionton" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors hover:scale-110 transform duration-300">
+          <a href="https://x.com/shinobiclanton" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors hover:scale-110 transform duration-300">
             <X className="w-8 h-8" />
           </a>
           <a href="https://dexscreener.com/ton/EQCsSZk2VI3oQfInyyjuvea08AFgfIcxxIShcVq1b9c5HGde" target="_blank" rel="noopener noreferrer" className="text-katana-cyan hover:text-katana-blue transition-colors hover:scale-110 transform duration-300">

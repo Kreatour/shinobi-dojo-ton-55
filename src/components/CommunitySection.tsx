@@ -16,7 +16,7 @@ export const CommunitySection = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <a href="https://x.com/shinobionton" target="_blank" rel="noopener noreferrer" className="block">
+            <a href="https://x.com/shinobiclanton" target="_blank" rel="noopener noreferrer" className="block">
               <Button className="btn-crimson w-full h-20 text-lg flex items-center justify-center gap-3">
                 <X className="w-6 h-6" />
                 X (Twitter)
