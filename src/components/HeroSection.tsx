@@ -86,7 +86,7 @@ export const HeroSection = () => {
               Buy $SHINOBI
             </Button>
           </a>
-          <a href="https://t.me/polarowlonton" target="_blank" rel="noopener noreferrer">
+          <a href="https://t.me/shinobionton" target="_blank" rel="noopener noreferrer">
             <Button className="ninja-dojo-btn text-xl px-12 py-6 font-orbitron font-bold group">
               Join the Dojo
             </Button>
